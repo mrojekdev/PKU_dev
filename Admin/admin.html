@@ -6,9 +6,9 @@
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <!-- Popper JS -->
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <!-- Latest compiled and minified CSS -->
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <!-- adminstyle -->
@@ -17,24 +17,30 @@
       </head>
       <body>
          <!-- Header -->
-         <div class="container-fluid header-cont">
-            <div class="row">
-               <div class="col-md-8 testcolor2">
-                  <div class="col-md-2 logo">
-                     <img src="assets/pku.png" style="max-height: 100%">
-                  </div>
-                  <div class="col-md-9 logo-text">
-                     <h2><b>RSKIA PKU KOTAGEDE</b></h2>
-                     <p><b>Jl. Kemasan No.30, Purbayan, Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta<br/>Telp : 0895-3675-11128<br/>Kode Pos : 55173</b></p>
-                  </div>
-               </div>
-               <div class="col-md-4 header-right">
-                  <div  class="admin">
-                     <h1>ADMIN</h1>
-                  </div>
-               </div>
+        <!-- Header -->
+   <div class="container-fluid header-cont">
+      <div class="row">
+         <div class="col-md-8 testcolor2">
+            <div class="col-md-2 logo">
+               <img src="assets/pku.png" style="max-height: 100%">
+            </div>
+            <div class="col-md-9 logo-text">
+               
+               <h2><b>RSKIA PKU KOTAGEDE</b></h2>
+               <p><b>Jl. Kemasan No.30, Purbayan, Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta<br/>Telp : 0895-3675-11128<br/>Kode Pos : 55173</b></p>
+               
             </div>
          </div>
+         <div class="col-md-4 header-right">
+            <div  class="socmed">
+               <img src="assets/fb.png">
+               <img src="assets/ig.png">
+               <img src="assets/g+.png">
+               <img src="assets/twitter.png">
+            </div>
+         </div>
+      </div>
+   </div>
          <!-- Home --> <!-- pembatasan char!!!! -->
          <div class="bgCaursel">
             <div class="container">
@@ -54,7 +60,8 @@
                      <input type="text" class="form-control Pinput" placeholder="Title" name="Tit1">
                      <input type="text" class="form-control Pinput" placeholder="Description" name="Desc1">
                      <br/>
-                     <input type="submit" class="btn btn-default">
+                     <button type="submit" class="btn btn-default right">Update</button>
+                     <button type="reset" class="btn btn-default right">Reset</button>
                   </form>
                </div>
             </div>
@@ -98,9 +105,12 @@
                         </div>
                      </div>
                     
-                     <input type="submit" class="btn btn-default Pinput">
+                     <button type="submit" class="btn btn-default Pinput right marginBottom">Tambahkan</button>
+                     <button type="reset" class="btn btn-default right marginBottom">Reset</button>
                	</div>
+               </form>
 
+                <form class="form-horizontal ManJadDok" action="#">
                	<div class="container jadwal">
 	               <table class="table table-striped table-hover e">
 		               <thead>
@@ -120,12 +130,78 @@
 		               <td>Penyakit Dalam</td>
 		               <td>Jumat-Sabtu</td>
 		               <td>15.00 - 20.00</td>
-		               <td><button type="button" class="btn btn-primary">Update</button><button type="button" class="btn btn-danger">Delete</button></td>
+		               <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popUpdate">Update</button>
+                          <div class="modal fade" id="popUpdate" role="dialog">
+                            <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Update Jadwal Dokter</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group has-feedback" id="ParentVal5">
+                                    <label class="col-sm-2 control-label">Nama Dokter</label>
+                                    <div class="col-sm-10">
+                                       <input type="text" class="form-control" id="validasi5" placeholder="Masukkan Nama Dokter">
+                                       <span class="glyphicon form-control-feedback" id="LogoVal5"></span>
+                                    </div>
+                                 </div>
+
+                                 <div class="form-group has-feedback" id="ParentVal6" >
+                                    <label class="col-sm-2 control-label">Spesialis</label>
+                                    <div class="col-sm-10">
+                                       <input type="text" class="form-control" id="validasi6" placeholder="Masukkan Spesialis Dokter">
+                                       <span class="glyphicon form-control-feedback" id="LogoVal6"></span>
+                                    </div>
+                                 </div>
+
+                                 <div class="form-group has-feedback" id="ParentVal7">
+                                    <label class="col-sm-2 control-label">Hari Praktek</label>
+                                    <div class="col-sm-10">
+                                       <input type="text" class="form-control" id="validasi7" placeholder="Masukkan Hari Praktek Dokter">
+                                       <span class="glyphicon form-control-feedback" id="LogoVal7"></span>
+                                    </div>
+                                 </div>
+
+                                 <div class="form-group has-feedback" id="ParentVal8">
+                                    <label class="col-sm-2 control-label">Jam Praktek</label>
+                                    <div class="col-sm-10">
+                                       <input type="text" class="form-control" id="validasi8" placeholder="Masukkan Tanggal Praktek Dokter">
+                                       <span class="glyphicon form-control-feedback" id="LogoVal8"></span>
+                                    </div>
+                                 </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                 <button type="reset" class="btn btn-default">Reset</button>
+                                  <button type="submit" class="btn btn-default">Update</button>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#popDelete">Delete</button>
+                        <div class="modal fade" id="popDelete" role="dialog">
+                            <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Hapus Jadwal Dokter</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Data berhasil dihapus...</p>
+                                 </div>
+                              </div>
+                           </div>
+                     </td>
 		               </tr>
 		               </tbody>
 	               </table>	
                	</div>
-              </form>
+               </form>
             </div>
          </div>
       </body>
