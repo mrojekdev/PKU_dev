@@ -48,6 +48,11 @@ h3{
 
 
 @media screen and (max-width:767px) {
+.testcolor2{
+	text-align: center;
+	/*background-color: #bababa;*/
+	/*height: 140px;*/
+}
 .header-right{
 	visibility: hidden;
 	height: 0px;

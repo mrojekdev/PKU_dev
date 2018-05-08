@@ -5,19 +5,19 @@
          <title></title>
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         <!-- Popper JS -->
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <!-- Latest compiled and minified CSS -->
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+         <!-- Popper JS -->
+          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
          <!-- adminstyle -->
          <link rel="stylesheet" type="text/css" href="admin_style.css">
          <script src="admin.js"></script>
       </head>
       <body>
          <!-- Header -->
-        <!-- Header -->
    <div class="container-fluid header-cont">
       <div class="row">
          <div class="col-md-8 testcolor2">
@@ -41,6 +41,7 @@
          </div>
       </div>
    </div>
+
          <!-- Home --> <!-- pembatasan char!!!! -->
          <div class="bgCaursel">
             <div class="container">
@@ -72,44 +73,29 @@
               <form class="form-horizontal JadwalDok" action="#">
                  <div class="col-md-12">
                      <h3>Jadwal Dokter</h3>
-
-                     <div class="form-group has-feedback" id="ParentVal">
-                        <label class="col-sm-2 control-label">Nama Dokter</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="validasi" placeholder="Masukkan Nama Dokter">
-                           <span class="glyphicon form-control-feedback" id="LogoVal"></span>
-                        </div>
+                     <div class="form-group" id="ParentVal">
+                        <label class="form-control-label">Nama Dokter</label>
+                        <input type="text" class="form-control" id="validasi" placeholder="Masukkan Nama Dokter">
+                     </div>
+                     <div class="form-group" id="ParentVal2">
+                        <label class="form-control-label">Spesialis Dokter</label>
+                        <input type="text" class="form-control" id="validasi2" placeholder="Masukkan Spesialis Dokter">
+                     </div>
+                     <div class="form-group" id="ParentVal3">
+                        <label class="form-control-label">Hari Praktek Dokter</label>
+                        <input type="text" class="form-control" id="validasi3" placeholder="Masukkan Hari Praktek Dokter">
+                     </div>
+                     <div class="form-group" id="ParentVal4">
+                        <label class="form-control-label">Waktu Praktek Dokter</label>
+                        <input type="text" class="form-control" id="validasi4" placeholder="Masukkan Waktu Praktek Dokter">
                      </div>
 
-                     <div class="form-group has-feedback" id="ParentVal2" >
-                        <label class="col-sm-2 control-label">Spesialis</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="validasi2" placeholder="Masukkan Spesialis Dokter">
-                           <span class="glyphicon form-control-feedback" id="LogoVal2"></span>
-                        </div>
-                     </div>
 
-                     <div class="form-group has-feedback" id="ParentVal3">
-                        <label class="col-sm-2 control-label">Hari Praktek</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="validasi3" placeholder="Masukkan Hari Praktek Dokter">
-                           <span class="glyphicon form-control-feedback" id="LogoVal3"></span>
-                        </div>
-                     </div>
-
-                     <div class="form-group has-feedback" id="ParentVal4">
-                        <label class="col-sm-2 control-label">Jam Praktek</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="validasi4" placeholder="Masukkan Tanggal Praktek Dokter">
-                           <span class="glyphicon form-control-feedback" id="LogoVal4"></span>
-                        </div>
-                     </div>
                     
                      <button type="submit" class="btn btn-default Pinput right marginBottom">Tambahkan</button>
                      <button type="reset" class="btn btn-default right marginBottom">Reset</button>
                	</div>
                </form>
-
                 <form class="form-horizontal ManJadDok" action="#">
                	<div class="container jadwal">
 	               <table class="table table-striped table-hover e">
@@ -132,56 +118,40 @@
 		               <td>15.00 - 20.00</td>
 		               <td>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popUpdate">Update</button>
-                          <div class="modal fade" id="popUpdate" role="dialog">
-                            <div class="modal-dialog">
-                              <!-- Modal content-->
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                  <h4 class="modal-title">Update Jadwal Dokter</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group has-feedback" id="ParentVal5">
-                                    <label class="col-sm-2 control-label">Nama Dokter</label>
-                                    <div class="col-sm-10">
-                                       <input type="text" class="form-control" id="validasi5" placeholder="Masukkan Nama Dokter">
-                                       <span class="glyphicon form-control-feedback" id="LogoVal5"></span>
-                                    </div>
-                                 </div>
-
-                                 <div class="form-group has-feedback" id="ParentVal6" >
-                                    <label class="col-sm-2 control-label">Spesialis</label>
-                                    <div class="col-sm-10">
-                                       <input type="text" class="form-control" id="validasi6" placeholder="Masukkan Spesialis Dokter">
-                                       <span class="glyphicon form-control-feedback" id="LogoVal6"></span>
-                                    </div>
-                                 </div>
-
-                                 <div class="form-group has-feedback" id="ParentVal7">
-                                    <label class="col-sm-2 control-label">Hari Praktek</label>
-                                    <div class="col-sm-10">
-                                       <input type="text" class="form-control" id="validasi7" placeholder="Masukkan Hari Praktek Dokter">
-                                       <span class="glyphicon form-control-feedback" id="LogoVal7"></span>
-                                    </div>
-                                 </div>
-
-                                 <div class="form-group has-feedback" id="ParentVal8">
-                                    <label class="col-sm-2 control-label">Jam Praktek</label>
-                                    <div class="col-sm-10">
-                                       <input type="text" class="form-control" id="validasi8" placeholder="Masukkan Tanggal Praktek Dokter">
-                                       <span class="glyphicon form-control-feedback" id="LogoVal8"></span>
-                                    </div>
-                                 </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                 <button type="reset" class="btn btn-default">Reset</button>
-                                  <button type="submit" class="btn btn-default">Update</button>
-                                </div>
+                        <div class="modal fade" id="popUpdate">
+                           <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Update Jadwal Dokter</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
                               </div>
-                              
+                              <div class="modal-body">
+                                <div class="form-group" id="ParentVal5">
+                                       <label class="form-control-label">Nama Dokter</label>
+                                       <input type="text" class="form-control" id="validasi5" placeholder="Masukkan Nama Dokter">
+                                    </div>
+                                    <div class="form-group" id="ParentVal6">
+                                       <label class="form-control-label">Spesialis Dokter</label>
+                                       <input type="text" class="form-control" id="validasi6" placeholder="Masukkan Spesialis Dokter">
+                                    </div>
+                                    <div class="form-group" id="ParentVal7">
+                                       <label class="form-control-label">Hari Praktek Dokter</label>
+                                       <input type="text" class="form-control" id="validasi7" placeholder="Masukkan Hari Praktek Dokter">
+                                    </div>
+                                    <div class="form-group" id="ParentVal8">
+                                       <label class="form-control-label">Waktu Praktek Dokter</label>
+                                       <input type="text" class="form-control" id="validasi8" placeholder="Masukkan Waktu Praktek Dokter">
+                                    </div>
+                              </div>
+                              <div class="modal-footer">
+                                 <button type="reset" class="btn btn-default">Reset</button>
+                                 <button type="submit" class="btn btn-primary">Update</button>
+                              </div>
                             </div>
                           </div>
+                        </div>
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#popDelete">Delete</button>
                         <div class="modal fade" id="popDelete" role="dialog">
                             <div class="modal-dialog">
